@@ -1,0 +1,19 @@
+<?php
+
+/** @var \Magento\Sales\Block\Adminhtml\Order\AbstractOrder $block */
+$order = $block->getOrder();
+
+?>
+
+<section class="admin__page-section order-view-external-order-id">
+    <div class="admin__page-section-title">
+        <span class="title"><?= $block->escapeHtml(__('External Order Id')) ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item external-order-id">
+            <div class="admin__page-section-item-content">
+                <?= $order->getExternalOrderId() ?>
+            </div>
+        </div>
+    </div>
+</section>
